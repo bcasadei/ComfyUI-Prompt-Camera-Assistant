@@ -37,7 +37,7 @@ Documentation = "https://github.com/bcasadei/comfyui_prompt_camera_assistant/wik
 
 [tool.comfy]
 PublisherId = "bcasadei"
-DisplayName = "Propmt Camera Assistant"
+DisplayName = "Prompt Camera Assistant"
 Icon = ""
 Tags = []
 Repository = "https://github.com/bcasadei/comfyui_prompt_camera_assistant"
