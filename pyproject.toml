@@ -33,6 +33,7 @@ Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
 BugTracker = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/issues"
 Documentation = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/wiki"
 
+
 [tool.comfy]
 PublisherId = "bcasadei"
 DisplayName = "Prompt Camera Assistant"
