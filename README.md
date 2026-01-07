@@ -1,66 +1,179 @@
-# Prompt Camera Assistant
+# Prompt Camera Assistant (ComfyUI Node)
 
-Prompt camera assistant for adding camera details to prompts.
+**Prompt Camera Assistant** is a custom **ComfyUI node** that provides a structured, extensible camera and lens library for generating **photography-accurate and cinema-aware AI prompts**.
 
-> [!NOTE]
-> This projected was created with a [cookiecutter](https://github.com/Comfy-Org/cookiecutter-comfy-extension) template. It helps you start writing custom nodes without worrying about the Python setup.
+The node allows users to select **Still or Video workflows**, then dynamically choose cameras, lenses, film stocks, exposure settings, and stylistic modifiers (bokeh, focus, motion blur) that are assembled into clean, consistent prompt text.
 
-## Quickstart
+This project is designed for:
 
-1. Install [ComfyUI](https://docs.comfy.org/get_started).
-1. Install [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)
-1. Look up this extension in ComfyUI-Manager. If you are installing manually, clone this repository under `ComfyUI/custom_nodes`.
-1. Restart ComfyUI.
+-   Prompt engineers
+-   Generative photography & cinematography
+-   ComfyUI power users
+-   Workflow-driven AI creators
 
-# Features
+---
 
--   A list of features
+## Features
 
-## Develop
+-   📷 **Still vs Video mode selection**
+-   🎥 **Cinema camera support** (ARRI, RED, Blackmagic, Sony, Canon)
+-   📸 **Still camera support** (DSLR, Mirrorless, Film)
+-   🔍 **Lens types & focal behavior**
+-   🎞 **Iconic film stocks** (negative, slide, instant, digital looks)
+-   ⚙️ **Exposure controls** (aperture, ISO, shutter speed)
+-   ✨ **Stylistic modifiers**
+    -   Bokeh styles
+    -   Focus styles
+    -   Motion blur presets
+-   🧩 Built as a **ComfyUI custom node**
+-   🛠 Backend-driven dropdowns (clean UI, dynamic expansion)
 
-To install the dev dependencies and pre-commit (will run the ruff hook), do:
+---
 
-```bash
-cd comfyui_prompt_camera_assistant
-pip install -e .[dev]
-pre-commit install
-```
+## Why Camera & Lens Metadata in AI Prompts?
 
-The `-e` flag above will result in a "live" install, in the sense that any changes you make to your node extension will automatically be picked up the next time you run ComfyUI.
+Modern diffusion and generative models respond strongly to **photographic language**:
 
-## Publish to Github
+-   Camera systems influence realism and tone
+-   Lens types affect perspective and depth
+-   Film stocks guide color science and contrast
+-   Exposure terms shape lighting and motion
 
-Install Github Desktop or follow these [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for ssh.
+This node standardizes those inputs so users don’t need to memorize or manually type camera syntax.
 
-1. Create a Github repository that matches the directory name.
-2. Push the files to Git
+---
 
-```
-git add .
-git commit -m "project scaffolding"
-git push
-```
+## Project Structure
 
-## Writing custom nodes
+PromptCameraAssistant/
+├── nodes.py
+├── README.md
 
-An example custom node is located in [node.py](src/comfyui_prompt_camera_assistant/nodes.py). To learn more, read the [docs](https://docs.comfy.org/essentials/custom_node_overview).
+-   `nodes.py`  
+    Contains:
+    -   `PromptCameraLibrary` – the backend camera/lens/film data
+    -   `PromptCameraAssistant` – the ComfyUI node definition
 
-## Tests
+---
 
-This repo contains unit tests written in Pytest in the `tests/` directory. It is recommended to unit test your custom node.
+## Installation
 
--   [build-pipeline.yml](.github/workflows/build-pipeline.yml) will run pytest and linter on any open PRs
--   [validate.yml](.github/workflows/validate.yml) will run [node-diff](https://github.com/Comfy-Org/node-diff) to check for breaking changes
+1. Navigate to your ComfyUI custom nodes directory: ComfyUI/custom_nodes/
 
-## Publishing to Registry
+2. Clone this repository: git clone https://github.com/YOUR_USERNAME/PromptCameraAssistant.git
 
-If you wish to share this custom node with others in the community, you can publish it to the registry. We've already auto-populated some fields in `pyproject.toml` under `tool.comfy`, but please double-check that they are correct.
+3. Restart ComfyUI
 
-You need to make an account on https://registry.comfy.org and create an API key token.
+The node will appear under: CATEGORY: Prompt / Camera
 
--   [ ] Go to the [registry](https://registry.comfy.org). Login and create a publisher id (everything after the `@` sign on your registry profile).
--   [ ] Add the publisher id into the pyproject.toml file.
--   [ ] Create an api key on the Registry for publishing from Github. [Instructions](https://docs.comfy.org/registry/publishing#create-an-api-key-for-publishing).
--   [ ] Add it to your Github Repository Secrets as `REGISTRY_ACCESS_TOKEN`.
+---
 
-A Github action will run on every git push. You can also run the Github action manually. Full instructions [here](https://docs.comfy.org/registry/publishing). Join our [discord](https://discord.com/invite/comfyorg) if you have any questions!
+## Node Overview
+
+### PromptCameraAssistant
+
+**Inputs**
+
+-   Mode: Still / Video
+-   Camera
+-   Lens type
+-   Film / Sensor look
+-   Aperture (f-stop)
+-   ISO
+-   Shutter speed
+-   Bokeh style
+-   Focus style
+-   Motion blur preset
+
+**Output**
+
+-   A formatted prompt string (or integrated into your workflow)
+
+---
+
+## Camera Library Coverage
+
+### Still Cameras
+
+-   DSLR
+-   Mirrorless
+-   Film
+
+Includes:
+
+-   Canon, Nikon, Sony, Fujifilm, Leica, Hasselblad, Pentax
+-   Instant film (Polaroid)
+-   Medium format systems
+
+### Cinema Cameras
+
+-   ARRI ALEXA series
+-   RED DSMC / V-RAPTOR
+-   Blackmagic Pocket & URSA
+-   Sony FX & Venice
+-   Canon Cinema EOS
+-   Panasonic Varicam / EVA
+
+---
+
+## Film Stocks
+
+### Color Negative
+
+-   Kodak Portra 160 / 400 / 800
+-   Kodak Gold 200
+-   Fujifilm Pro 400H
+
+### Slide (Transparency)
+
+-   Kodachrome
+-   Fujifilm Velvia 50 / 100
+-   Fujifilm Provia 100F
+-   Kodak Ektachrome E100
+
+### Instant
+
+-   Polaroid Originals / Polaroid Now
+
+### Digital Looks
+
+-   Clean digital
+-   Cinema digital
+-   Vintage digital CCD
+
+---
+
+## Design Philosophy
+
+-   **Dropdown-first UX** (no free-text chaos)
+-   **Real photographic language**
+-   **Model-agnostic** (SD, Flux, Krea, future models)
+-   **Expandable library** without breaking workflows
+-   Focused on **visual outcome**, not camera specs trivia
+
+---
+
+## Roadmap (Optional)
+
+-   Prompt string output node
+-   Automatic prompt assembly templates
+-   Per-model prompt tuning
+-   Preset packs (cinematic, fashion, street, documentary)
+-   UI grouping improvements
+
+---
+
+## License
+
+MIT License  
+Use freely, modify, fork, and build upon.
+
+---
+
+## Credits
+
+Created by **Bill Casadei**  
+Built for ComfyUI & generative photography workflows.
+
+> NOTE: This project was created from the Comfy-Org cookiecutter template
+> to simplify writing custom ComfyUI nodes and packaging them for distribution.

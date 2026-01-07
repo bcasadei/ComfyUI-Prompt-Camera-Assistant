@@ -112,3 +112,7 @@ yarn-error.log*
 node.zip
 .vscode/
 .claude/
+
+# Misc
+README_bak.md
+.github/copilot-instructions.md
