@@ -60,7 +60,11 @@ PromptCameraAssistant/
 
 1. Navigate to your ComfyUI custom nodes directory: ComfyUI/custom_nodes/
 
-2. Clone this repository: git clone https://github.com/YOUR_USERNAME/PromptCameraAssistant.git
+2. Clone this repository into ComfyUI's `custom_nodes` directory:
+
+```
+git clone https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant.git
+```
 
 3. Restart ComfyUI
 

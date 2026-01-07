@@ -7,7 +7,7 @@ name = "comfyui_prompt_camera_assistant"
 version = "0.0.1"
 description = "Prompt camera assistant for adding camera details to prompts."
 authors = [
-  {name = "Bill Casadei", email = "bill@billcasadei.com"}
+    {name = "Bill Casadei"}
 ]
 readme = "README.md"
 license = {text = "MIT license"}
@@ -30,9 +30,9 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/bcasadei/comfyui_prompt_camera_assistant"
-BugTracker = "https://github.com/bcasadei/comfyui_prompt_camera_assistant/issues"
-Documentation = "https://github.com/bcasadei/comfyui_prompt_camera_assistant/wiki"
+Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
+BugTracker = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/issues"
+Documentation = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/wiki"
 
 
 [tool.comfy]
@@ -40,7 +40,7 @@ PublisherId = "bcasadei"
 DisplayName = "Prompt Camera Assistant"
 Icon = ""
 Tags = []
-Repository = "https://github.com/bcasadei/comfyui_prompt_camera_assistant"
+Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
 
 includes = []
 
