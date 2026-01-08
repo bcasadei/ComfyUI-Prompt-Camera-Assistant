@@ -1,86 +1,18 @@
-[build-system]
-requires = ["setuptools>=70.0"]
-build-backend = "setuptools.build_meta"
-
+# pyproject.toml
 [project]
-name = "comfyui_prompt_camera_assistant"
-version = "0.0.1"
+name = "comfyui_prompt_camera_assistant" # Unique identifier for your node. Immutable after creation.
 description = "Prompt camera assistant for adding camera details to prompts."
-authors = [
-    {name = "Bill Casadei"}
-]
-readme = "README.md"
+version = "1.0.0" # Custom Node version. Must be semantically versioned.
 license = {text = "MIT license"}
-requires-python = ">=3.10"
-classifiers = []
-dependencies = [
-
-]
-
-
-[project.optional-dependencies]
-dev = [
-    "bump-my-version",
-    "coverage",  # testing
-    "mypy",  # linting
-    "pre-commit", # runs linting on commit
-    "pytest",  # testing
-    "ruff",  # linting
-]
+dependencies  = [] # Filled in from requirements.txt
 
 [project.urls]
 Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
-BugTracker = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/issues"
-Documentation = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant/wiki"
 
 [tool.comfy]
 PublisherId = "bcasadei"
 DisplayName = "Prompt Camera Assistant"
-Icon = ""
-Tags = []
-Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
-
-includes = []
 
 
-[tool.setuptools.package-data]
-"*" = ["*.*"]
 
-[tool.pytest.ini_options]
-minversion = "8.0"
-testpaths = [
-    "tests",
-]
 
-[tool.mypy]
-files = "."
-
-# Use strict defaults
-strict = true
-warn_unreachable = true
-warn_no_return = true
-
-[[tool.mypy.overrides]]
-# Don't require test functions to include types
-module = "tests.*"
-allow_untyped_defs = true
-disable_error_code = "attr-defined"
-
-[tool.ruff]
-# extend-exclude = ["static", "ci/templates"]
-line-length = 140
-src = ["src", "tests"]
-target-version = "py39"
-
-# Add rules to ban exec/eval
-[tool.ruff.lint]
-select = [
-    "S102",  # exec-builtin
-    "S307",  # eval-used
-    "W293",
-    "F",  # The "F" series in Ruff stands for "Pyflakes" rules, which catch various Python syntax errors and undefined names.
-    # See all rules here: https://docs.astral.sh/ruff/rules/#pyflakes-f
-]
-
-[tool.ruff.lint.flake8-quotes]
-inline-quotes = "double"
