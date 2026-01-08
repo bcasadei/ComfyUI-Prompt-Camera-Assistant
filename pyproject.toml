@@ -9,6 +9,7 @@ dependencies  = [] # Filled in from requirements.txt
 [project.urls]
 Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
 
+
 [tool.comfy]
 PublisherId = "bcasadei"
 DisplayName = "Prompt Camera Assistant"
