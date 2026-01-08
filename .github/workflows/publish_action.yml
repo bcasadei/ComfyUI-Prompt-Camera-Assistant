@@ -26,4 +26,5 @@ jobs:
               env:
                   COMFY_API_KEY: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
                   COMFY_TRACKING: "false"
-              run: comfy node publish --path src/comfyui_prompt_camera_assistant
+              run: |
+                  echo "n" | comfy node publish --path .
