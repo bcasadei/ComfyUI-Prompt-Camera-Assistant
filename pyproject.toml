@@ -42,7 +42,6 @@ Repository = "https://github.com/bcasadei/ComfyUI-Prompt-Camera-Assistant"
 
 includes = []
 
-
 [tool.setuptools.package-data]
 "*" = ["*.*"]
 

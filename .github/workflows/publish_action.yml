@@ -25,4 +25,4 @@ jobs:
             - name: Publish to Comfy Registry
               env:
                   COMFY_API_KEY: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
-              run: comfy node publish
+              run: comfy node publish --path .
