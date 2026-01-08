@@ -3,7 +3,7 @@
 [project]
 name = "comfyui_prompt_camera_assistant" # Unique identifier for your node. Immutable after creation.
 description = "Prompt camera assistant for adding camera details to prompts."
-version = "1.0.0" # Custom Node version. Must be semantically versioned.
+version = "1.0.1" # Custom Node version. Must be semantically versioned.
 license = {text = "MIT license"}
 dependencies  = [] # Filled in from requirements.txt
 
