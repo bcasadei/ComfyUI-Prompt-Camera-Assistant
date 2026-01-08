@@ -25,4 +25,5 @@ jobs:
             - name: Publish to Comfy Registry
               env:
                   COMFY_API_KEY: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
-              run: comfy node publish --path .
+                  COMFY_TRACKING: "false"
+              run: comfy node publish --path src/comfyui_prompt_camera_assistant
