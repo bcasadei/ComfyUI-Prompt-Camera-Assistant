@@ -1,4 +1,5 @@
 # pyproject.toml
+
 [project]
 name = "comfyui_prompt_camera_assistant" # Unique identifier for your node. Immutable after creation.
 description = "Prompt camera assistant for adding camera details to prompts."
